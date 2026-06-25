@@ -53,6 +53,10 @@ def ffmpeg_bin():
 
 FF = ffmpeg_bin()
 
+# Export with NO audio so you can add licensed music in YouTube after upload.
+# Set True (and optionally drop inaction/music.mp3) if you ever want baked-in audio.
+INCLUDE_AUDIO = False
+
 # In-point (seconds) into each clip for its strongest moment. Tune these.
 START_AT = {"clip1.mp4": 53.0, "clip2.mp4": 4.0, "clip3.mp4": 27.0, "clip4.mp4": 9.0}
 
@@ -269,11 +273,16 @@ def main():
          "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "medium",
          "-crf", "19", "-profile:v", "high", "-level", "4.0", titled])
 
-    audio = build_audio(TOTAL)
-    run([FF, "-y", "-i", titled, "-i", audio,
-         "-map", "0:v:0", "-map", "1:a:0", "-c:v", "copy",
-         "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart",
-         "-shortest", OUT])
+    if INCLUDE_AUDIO:
+        audio = build_audio(TOTAL)
+        run([FF, "-y", "-i", titled, "-i", audio,
+             "-map", "0:v:0", "-map", "1:a:0", "-c:v", "copy",
+             "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart",
+             "-shortest", OUT])
+    else:
+        # Silent export — add music in YouTube after upload.
+        run([FF, "-y", "-i", titled, "-an", "-c:v", "copy",
+             "-movflags", "+faststart", OUT])
 
     info = subprocess.run([FF, "-i", OUT], capture_output=True, text=True).stderr
     print(f"\nDONE -> {OUT}\nPlanned: {TOTAL:.1f}s  {W}x{H} @ {FPS}fps")
