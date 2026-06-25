@@ -26,6 +26,7 @@ INPUT CLIPS (drop real files in inaction/clips/; they override the placeholders)
 Tune START_AT to pick each clip's strongest in-point. Run: python3 inaction/build_short.py
 """
 
+import glob
 import os
 import shutil
 import subprocess
@@ -146,15 +147,28 @@ def make_scrim():
     return out
 
 
+VIDEO_EXTS = {".mp4", ".mov", ".m4v", ".avi", ".mkv", ".webm"}
+SEARCH_DIRS = [CLIPS, HERE]            # look in clips/ first, then the project folder
+NAME_PATTERNS = ["clip{n}", "clip {n}", "clip_{n}", "clip-{n}", "clip {n} ", "clip{n} "]
+
+
 def resolve_src(clip):
-    real = os.path.join(CLIPS, clip)
-    if os.path.exists(real):
-        return real
-    placeholder = os.path.join(CLIPS, clip.replace(".mp4", ".placeholder.mp4"))
+    """Find clipN no matter the spacing/case/extension, in clips/ or the project folder.
+    Real files always win; the bundled *.placeholder.mp4 is the fallback."""
+    n = "".join(ch for ch in os.path.splitext(clip)[0] if ch.isdigit())
+    for d in SEARCH_DIRS:
+        for pat in NAME_PATTERNS:
+            stem = pat.format(n=n).strip()
+            for f in sorted(glob.glob(os.path.join(d, stem + ".*"))):
+                if ".placeholder." in os.path.basename(f).lower():
+                    continue
+                if os.path.splitext(f)[1].lower() in VIDEO_EXTS:
+                    return f
+    placeholder = os.path.join(CLIPS, f"clip{n}.placeholder.mp4")
     if os.path.exists(placeholder):
-        print(f"  (using placeholder for {clip} — drop a real {clip} in clips/ to override)")
+        print(f"  (using placeholder for clip{n} — add your clip {n} to use real footage)")
         return placeholder
-    sys.exit(f"Missing source clip: {real}")
+    sys.exit(f"Could not find a video for clip {n} (looked for 'clip {n}.*' in {CLIPS} and {HERE})")
 
 
 def normalize_clip(name, clip, ss, dur, scrim, zoom=True, flash=True):
