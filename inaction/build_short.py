@@ -9,9 +9,15 @@ Output: inaction/final_short.mp4  (15.5s, 1080x1920, 9:16)
   - 5.5-8.5s  : #2  "The baby came running back"
   - 8.5-14.5s : #1  "This is pure love"
   - 14.5-15.5s: end screen  ("Which one hit hardest?")
+
+Viral-grade craft (works on ANY footage):
+  - top contrast scrim so white text always reads
+  - white-flash cut transitions for snap/energy
+  - animated pop-in ranking numbers
+  - gentle Ken Burns push-in on every clip
 Music: uses inaction/music.mp3 if present, else a soft placeholder pad.
 
-INPUT CLIPS (drop real files in inaction/clips/, overwriting placeholders):
+INPUT CLIPS (drop real files in inaction/clips/; they override the placeholders):
   clip1.mp4  entertain522  "animal hugging"          -> shown as #3
   clip2.mp4  raquelcristal "runs to owner"           -> shown as #2
   clip3.mp4  vnphib        "dog seeing owner again"  -> shown as #4
@@ -85,8 +91,7 @@ def t(sec):
 
 
 def write_ass(path):
-    # Colours are &HAABBGGRR (AA=00 opaque). White fill, black outline, heavy
-    # outline + shadow for readability over bright footage. Anchor = centre (an5).
+    # Colours &HAABBGGRR. White fill, black outline, heavy outline+shadow.
     header = f"""[Script Info]
 ScriptType: v4.00+
 PlayResX: {W}
@@ -104,16 +109,21 @@ Style: Ends,DejaVu Sans,74,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
-    # Per-style on-screen centre position (x=540 centre).
     pos = {"Rank": (540, 360), "Phrase": (540, 600),
            "End": (540, 820), "Ends": (540, 1000)}
-    # The intro single-line uses the Rank style but lower on screen.
     lines = []
     for start, end, style, text in CUES:
         x, y = pos[style]
         if style == "Rank" and text.startswith("#1 made me cry"):
-            y = 640
-        tag = f"{{\\an5\\pos({x},{y})\\fad(120,120)}}"
+            # intro: lower, hard pop-in
+            tag = f"{{\\an5\\pos(540,640)\\fad(60,80)\\fscx70\\fscy70\\t(0,140,\\fscx108\\fscy108)\\t(140,240,\\fscx100\\fscy100)}}"
+        elif style == "Rank":
+            # ranking number: spring pop-in
+            tag = f"{{\\an5\\pos({x},{y})\\fad(70,120)\\fscx55\\fscy55\\t(0,170,\\fscx108\\fscy108)\\t(170,280,\\fscx100\\fscy100)}}"
+        elif style == "Phrase":
+            tag = f"{{\\an5\\pos({x},{y})\\fad(150,120)}}"
+        else:  # End / Ends
+            tag = f"{{\\an5\\pos({x},{y})\\fad(160,0)}}"
         lines.append(
             f"Dialogue: 0,{t(start)},{t(end)},{style},,0,0,0,,{tag}{text}")
     with open(path, "w") as f:
@@ -127,6 +137,15 @@ def run(cmd):
         sys.exit(f"ffmpeg failed: {' '.join(str(c) for c in cmd[:6])} ...")
 
 
+def make_scrim():
+    """Top gradient scrim (darkens top third) so white text reads on any clip."""
+    out = os.path.join(TMP, "scrim.png")
+    run([FF, "-y", "-f", "lavfi", "-i", f"color=c=black:s={W}x{H}",
+         "-vf", "format=rgba,geq=r=0:g=0:b=0:a='clip(155*(1-Y/800),0,155)'",
+         "-frames:v", "1", out])
+    return out
+
+
 def resolve_src(clip):
     real = os.path.join(CLIPS, clip)
     if os.path.exists(real):
@@ -138,13 +157,20 @@ def resolve_src(clip):
     sys.exit(f"Missing source clip: {real}")
 
 
-def normalize_clip(name, clip, ss, dur):
+def normalize_clip(name, clip, ss, dur, scrim, zoom=True, flash=True):
     src = resolve_src(clip)
-    vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase,"
-          f"crop={W}:{H},setsar=1,fps={FPS},format=yuv420p")
+    frames = max(1, int(round(dur * FPS)))
+    # Gentle Ken Burns push-in (~7% over the segment).
+    zp = (f"zoompan=z='min(1+0.00045*on,1.12)':d=1:"
+          f"x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={W}x{H}:fps={FPS}"
+          if zoom else f"fps={FPS}")
+    fade = ",fade=t=in:st=0:d=0.10:color=white" if flash else ""
+    fc = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,"
+          f"crop={W}:{H},setsar=1,{zp}[z];"
+          f"[z][1:v]overlay=0:0{fade},format=yuv420p[o]")
     out = os.path.join(TMP, f"{name}.mp4")
-    run([FF, "-y", "-ss", str(ss), "-t", str(dur), "-i", src,
-         "-vf", vf, "-an", "-r", str(FPS),
+    run([FF, "-y", "-ss", str(ss), "-t", str(dur), "-i", src, "-i", scrim,
+         "-filter_complex", fc, "-map", "[o]", "-an", "-r", str(FPS),
          "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast",
          "-profile:v", "high", "-level", "4.0", out])
     return out
@@ -154,8 +180,9 @@ def end_screen():
     out = os.path.join(TMP, "end.mp4")
     run([FF, "-y", "-f", "lavfi", "-t", str(END_DUR),
          "-i", f"color=c=0x14141e:s={W}x{H}:r={FPS}",
-         "-vf", "format=yuv420p", "-c:v", "libx264", "-pix_fmt", "yuv420p",
-         "-preset", "veryfast", "-profile:v", "high", "-level", "4.0", out])
+         "-vf", "fade=t=in:st=0:d=0.12:color=white,format=yuv420p",
+         "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "veryfast",
+         "-profile:v", "high", "-level", "4.0", out])
     return out
 
 
@@ -180,9 +207,10 @@ def build_audio(total):
 
 def main():
     os.makedirs(TMP, exist_ok=True)
-    pieces = [normalize_clip(*INTRO)]
+    scrim = make_scrim()
+    pieces = [normalize_clip(*INTRO, scrim, zoom=True, flash=False)]
     for seg in SEGMENTS:
-        pieces.append(normalize_clip(*seg))
+        pieces.append(normalize_clip(*seg, scrim))
     pieces.append(end_screen())
 
     listfile = os.path.join(TMP, "concat.txt")
