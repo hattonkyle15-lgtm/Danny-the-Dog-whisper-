@@ -54,10 +54,13 @@ def ffmpeg_bin():
 FF = ffmpeg_bin()
 
 # In-point (seconds) into each clip for its strongest moment. Tune these.
-START_AT = {"clip1.mp4": 0.0, "clip2.mp4": 0.0, "clip3.mp4": 0.0, "clip4.mp4": 0.0}
+START_AT = {"clip1.mp4": 4.5, "clip2.mp4": 33.0, "clip3.mp4": 105.5, "clip4.mp4": 18.5}
+
+# Opening 0.5s flash points at the #1 clip's peak (horse's head fully in the lap).
+INTRO_FLASH_AT = 22.0
 
 # (name, clip, in-point, duration)
-INTRO = ("intro", "clip4.mp4", START_AT["clip4.mp4"], 0.5)
+INTRO = ("intro", "clip4.mp4", INTRO_FLASH_AT, 0.5)
 SEGMENTS = [
     ("seg4", "clip3.mp4", START_AT["clip3.mp4"], 2.5),
     ("seg3", "clip1.mp4", START_AT["clip1.mp4"], 2.5),
@@ -171,15 +174,22 @@ def resolve_src(clip):
     sys.exit(f"Could not find a video for clip {n} (looked for 'clip {n}.*' in {CLIPS} and {HERE})")
 
 
+# Some source clips have the original creator's caption burned into the top.
+# Crop that many pixels off the top of the source to remove it (content is
+# lower-centre on these clips, so nothing emotional is lost).
+CROP_TOP = {"clip4.mp4": 470}
+
+
 def normalize_clip(name, clip, ss, dur, scrim, zoom=True, flash=True):
     src = resolve_src(clip)
-    frames = max(1, int(round(dur * FPS)))
+    ct = CROP_TOP.get(clip, 0)
+    pre = f"crop=iw:ih-{ct}:0:{ct}," if ct else ""
     # Gentle Ken Burns push-in (~7% over the segment).
     zp = (f"zoompan=z='min(1+0.00045*on,1.12)':d=1:"
           f"x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={W}x{H}:fps={FPS}"
           if zoom else f"fps={FPS}")
     fade = ",fade=t=in:st=0:d=0.10:color=white" if flash else ""
-    fc = (f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,"
+    fc = (f"[0:v]{pre}scale={W}:{H}:force_original_aspect_ratio=increase,"
           f"crop={W}:{H},setsar=1,{zp}[z];"
           f"[z][1:v]overlay=0:0{fade},format=yuv420p[o]")
     out = os.path.join(TMP, f"{name}.mp4")
