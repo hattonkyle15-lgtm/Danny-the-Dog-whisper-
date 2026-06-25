@@ -58,10 +58,11 @@ FF = ffmpeg_bin()
 INCLUDE_AUDIO = False
 
 # In-point (seconds) into each clip for its strongest moment. Tune these.
-START_AT = {"clip1.mp4": 53.0, "clip2.mp4": 4.0, "clip3.mp4": 27.0, "clip4.mp4": 9.0}
+# clip1=#3 fox(rescue), clip2=#2 dog(guards baby), clip3=#4 capybara family, clip4=#1 elephant(saves baby from croc)
+START_AT = {"clip1.mp4": 54.0, "clip2.mp4": 20.0, "clip3.mp4": 4.0, "clip4.mp4": 1.0}
 
-# Opening 0.5s flash points at the #1 clip's peak (tabby resting its head on the sleeping baby).
-INTRO_FLASH_AT = 14.0
+# Opening 0.5s flash points at the #1 clip's peak (the elephant rescue action).
+INTRO_FLASH_AT = 3.5
 
 # (name, clip, in-point, duration)
 INTRO = ("intro", "clip4.mp4", INTRO_FLASH_AT, 0.5)
@@ -76,16 +77,16 @@ TOTAL = INTRO[3] + sum(s[3] for s in SEGMENTS) + END_DUR  # 15.5s
 
 # Timed text cues: (start, end, style, text). \N = line break.
 CUES = [
-    (0.0,  0.5,  "Rank",  "#1 melted me…"),
+    (0.0,  0.5,  "Rank",  "#1 made me cry…"),
     (0.5,  3.0,  "Rank",  "#4"),
-    (0.5,  3.0,  "Phrase", "Meeting her\\Nfor the first time"),
+    (0.5,  3.0,  "Phrase", "Nobody gets\\Nleft behind"),
     (3.0,  5.5,  "Rank",  "#3"),
-    (3.0,  5.5,  "Phrase", "This hug melted me"),
+    (3.0,  5.5,  "Phrase", "He never\\Nforgot them"),
     (5.5,  8.5,  "Rank",  "#2"),
-    (5.5,  8.5,  "Phrase", "He couldn't\\Nbelieve it"),
+    (5.5,  8.5,  "Phrase", "He guards her\\Nlike his own"),
     (8.5,  14.5, "Rank",  "#1"),
-    (8.5,  14.5, "Phrase", "Love at first sight"),
-    (14.5, 15.5, "End",   "Which one melted you?"),
+    (8.5,  14.5, "Phrase", "A mom saved her baby\\Nfrom a crocodile"),
+    (14.5, 15.5, "End",   "Which one made you cry?"),
     (14.5, 15.5, "Ends",  "#4   #3   #2   #1"),
 ]
 
@@ -180,12 +181,12 @@ def resolve_src(clip):
 
 # Source clips have the original creator's captions burned in. Crop this many
 # pixels off the top / bottom of each to remove them (subject stays centre-frame).
-CROP_TOP = {"clip1.mp4": 485, "clip3.mp4": 240, "clip4.mp4": 240}
-CROP_BOTTOM = {"clip3.mp4": 180}
+CROP_TOP = {"clip2.mp4": 625, "clip4.mp4": 225}
+CROP_BOTTOM = {"clip1.mp4": 300, "clip4.mp4": 330}
 # Clips whose subject is a short, wide strip boxed in by burned-in captions/badges:
 # crop the captions off, then show the WHOLE strip fitted over a blurred fill so
 # the subject is never sliced. dict = pixels cropped off (top,bottom,left,right).
-FIT_BLUR = {"clip2.mp4": dict(top=270, bottom=740, left=150, right=0)}
+FIT_BLUR = {}
 
 
 def normalize_clip(name, clip, ss, dur, scrim, zoom=True, flash=True):
