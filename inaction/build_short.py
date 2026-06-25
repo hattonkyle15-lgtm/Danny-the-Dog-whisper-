@@ -26,6 +26,7 @@ INPUT CLIPS (drop real files in inaction/clips/; they override the placeholders)
 Tune START_AT to pick each clip's strongest in-point. Run: python3 inaction/build_short.py
 """
 
+import argparse
 import glob
 import os
 import shutil
@@ -87,6 +88,22 @@ CUES = [
     (8.5,  14.5, "Rank",  "#1"),
     (8.5,  14.5, "Phrase", "A mom saved her baby\\Nfrom a crocodile"),
     (14.5, 15.5, "End",   "Which one made you cry?"),
+    (14.5, 15.5, "Ends",  "#4   #3   #2   #1"),
+]
+
+# Generic ranking captions for --auto (volume) mode: emotional but content-agnostic,
+# so they fit any animal clip without hand-writing per video. Same ranking format.
+GENERIC_CUES = [
+    (0.0,  0.5,  "Rank",  "#1 made me cry…"),
+    (0.5,  3.0,  "Rank",  "#4"),
+    (0.5,  3.0,  "Phrase", "Wait for it…"),
+    (3.0,  5.5,  "Rank",  "#3"),
+    (3.0,  5.5,  "Phrase", "This one hurts"),
+    (5.5,  8.5,  "Rank",  "#2"),
+    (5.5,  8.5,  "Phrase", "I wasn't ready"),
+    (8.5,  14.5, "Rank",  "#1"),
+    (8.5,  14.5, "Phrase", "Pure love"),
+    (14.5, 15.5, "End",   "Which one hit hardest?"),
     (14.5, 15.5, "Ends",  "#4   #3   #2   #1"),
 ]
 
@@ -253,6 +270,35 @@ def build_audio(total):
 
 
 def main():
+    ap = argparse.ArgumentParser(description="Build a Top-4 ranking Short.")
+    ap.add_argument("--clips", help="folder holding clip1..clip4 (default: clips/)")
+    ap.add_argument("--out", help="output mp4 path (default: final_short.mp4)")
+    ap.add_argument("--auto", action="store_true",
+                    help="volume mode: generic captions, no hand-tuned in-points/crops")
+    args = ap.parse_args()
+
+    global CLIPS, OUT, TMP, START_AT, INTRO, SEGMENTS, TOTAL
+    global CUES, CROP_TOP, CROP_BOTTOM, FIT_BLUR
+    if args.clips:
+        CLIPS = os.path.abspath(args.clips)
+    if args.out:
+        OUT = os.path.abspath(args.out)
+        TMP = os.path.join(os.path.dirname(OUT), "_build")
+    if args.auto:
+        # Rough cuts for the daily batch: start each clip at 0, no caption crops,
+        # generic emotional captions. Re-cut winners by hand afterwards.
+        START_AT = {f"clip{i}.mp4": 0.0 for i in range(1, 5)}
+        CROP_TOP, CROP_BOTTOM, FIT_BLUR = {}, {}, {}
+        CUES = GENERIC_CUES
+        INTRO = ("intro", "clip4.mp4", 0.3, 0.5)
+        SEGMENTS = [
+            ("seg4", "clip3.mp4", 0.0, 2.5),
+            ("seg3", "clip1.mp4", 0.0, 2.5),
+            ("seg2", "clip2.mp4", 0.0, 3.0),
+            ("seg1", "clip4.mp4", 0.0, 6.0),
+        ]
+        TOTAL = INTRO[3] + sum(s[3] for s in SEGMENTS) + END_DUR
+
     os.makedirs(TMP, exist_ok=True)
     scrim = make_scrim()
     pieces = [normalize_clip(*INTRO, scrim, zoom=True, flash=False)]

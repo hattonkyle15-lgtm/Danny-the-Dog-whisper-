@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- macOS launchd job: run make_daily.sh every day at 7:00 AM.
+     EDIT the path below to the full path of make_daily.sh on your Mac, then:
+       cp com.kyle.makedaily.plist ~/Library/LaunchAgents/
+       launchctl load ~/Library/LaunchAgents/com.kyle.makedaily.plist -->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.kyle.makedaily</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/kyle/Desktop/Danny-the-Dog-whisper-/inaction/make_daily.sh</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key><integer>7</integer>
+        <key>Minute</key><integer>0</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/kyle/Desktop/Danny-the-Dog-whisper-/inaction/daily/cron.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/kyle/Desktop/Danny-the-Dog-whisper-/inaction/daily/cron.log</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>
