@@ -54,10 +54,10 @@ def ffmpeg_bin():
 FF = ffmpeg_bin()
 
 # In-point (seconds) into each clip for its strongest moment. Tune these.
-START_AT = {"clip1.mp4": 4.5, "clip2.mp4": 33.0, "clip3.mp4": 105.5, "clip4.mp4": 18.5}
+START_AT = {"clip1.mp4": 53.0, "clip2.mp4": 4.0, "clip3.mp4": 27.0, "clip4.mp4": 9.0}
 
-# Opening 0.5s flash points at the #1 clip's peak (horse's head fully in the lap).
-INTRO_FLASH_AT = 22.0
+# Opening 0.5s flash points at the #1 clip's peak (tabby resting its head on the sleeping baby).
+INTRO_FLASH_AT = 14.0
 
 # (name, clip, in-point, duration)
 INTRO = ("intro", "clip4.mp4", INTRO_FLASH_AT, 0.5)
@@ -72,16 +72,16 @@ TOTAL = INTRO[3] + sum(s[3] for s in SEGMENTS) + END_DUR  # 15.5s
 
 # Timed text cues: (start, end, style, text). \N = line break.
 CUES = [
-    (0.0,  0.5,  "Rank",  "#1 made me cry…"),
+    (0.0,  0.5,  "Rank",  "#1 melted me…"),
     (0.5,  3.0,  "Rank",  "#4"),
-    (0.5,  3.0,  "Phrase", "He remembered her"),
+    (0.5,  3.0,  "Phrase", "Meeting her\\Nfor the first time"),
     (3.0,  5.5,  "Rank",  "#3"),
-    (3.0,  5.5,  "Phrase", "This hug says\\Neverything"),
+    (3.0,  5.5,  "Phrase", "This hug melted me"),
     (5.5,  8.5,  "Rank",  "#2"),
-    (5.5,  8.5,  "Phrase", "The baby came\\Nrunning back"),
+    (5.5,  8.5,  "Phrase", "He couldn't\\Nbelieve it"),
     (8.5,  14.5, "Rank",  "#1"),
-    (8.5,  14.5, "Phrase", "This is pure love"),
-    (14.5, 15.5, "End",   "Which one hit hardest?"),
+    (8.5,  14.5, "Phrase", "Love at first sight"),
+    (14.5, 15.5, "End",   "Which one melted you?"),
     (14.5, 15.5, "Ends",  "#4   #3   #2   #1"),
 ]
 
@@ -118,8 +118,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     lines = []
     for start, end, style, text in CUES:
         x, y = pos[style]
-        if style == "Rank" and text.startswith("#1 made me cry"):
-            # intro: lower, hard pop-in
+        if style == "Rank" and " " in text:
+            # intro flash line: lower, hard pop-in
             tag = f"{{\\an5\\pos(540,640)\\fad(60,80)\\fscx70\\fscy70\\t(0,140,\\fscx108\\fscy108)\\t(140,240,\\fscx100\\fscy100)}}"
         elif style == "Rank":
             # ranking number: spring pop-in
@@ -174,24 +174,42 @@ def resolve_src(clip):
     sys.exit(f"Could not find a video for clip {n} (looked for 'clip {n}.*' in {CLIPS} and {HERE})")
 
 
-# Some source clips have the original creator's caption burned into the top.
-# Crop that many pixels off the top of the source to remove it (content is
-# lower-centre on these clips, so nothing emotional is lost).
-CROP_TOP = {"clip4.mp4": 470}
+# Source clips have the original creator's captions burned in. Crop this many
+# pixels off the top / bottom of each to remove them (subject stays centre-frame).
+CROP_TOP = {"clip1.mp4": 485, "clip3.mp4": 240, "clip4.mp4": 240}
+CROP_BOTTOM = {"clip3.mp4": 180}
+# Clips whose subject is a short, wide strip boxed in by burned-in captions/badges:
+# crop the captions off, then show the WHOLE strip fitted over a blurred fill so
+# the subject is never sliced. dict = pixels cropped off (top,bottom,left,right).
+FIT_BLUR = {"clip2.mp4": dict(top=270, bottom=740, left=150, right=0)}
 
 
 def normalize_clip(name, clip, ss, dur, scrim, zoom=True, flash=True):
     src = resolve_src(clip)
-    ct = CROP_TOP.get(clip, 0)
-    pre = f"crop=iw:ih-{ct}:0:{ct}," if ct else ""
-    # Gentle Ken Burns push-in (~7% over the segment).
-    zp = (f"zoompan=z='min(1+0.00045*on,1.12)':d=1:"
+    # Decimate to FPS FIRST (sources may be 60fps; zoompan maps 1 output frame
+    # per input frame, so without this every segment comes out 2x too long).
+    # Then a gentle Ken Burns push-in (~7% over the segment).
+    zp = (f"fps={FPS},zoompan=z='min(1+0.00045*on,1.12)':d=1:"
           f"x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={W}x{H}:fps={FPS}"
           if zoom else f"fps={FPS}")
     fade = ",fade=t=in:st=0:d=0.10:color=white" if flash else ""
-    fc = (f"[0:v]{pre}scale={W}:{H}:force_original_aspect_ratio=increase,"
-          f"crop={W}:{H},setsar=1,{zp}[z];"
-          f"[z][1:v]overlay=0:0{fade},format=yuv420p[o]")
+    if clip in FIT_BLUR:
+        c = FIT_BLUR[clip]
+        crop = (f"crop=iw-{c['left']+c['right']}:ih-{c['top']+c['bottom']}:"
+                f"{c['left']}:{c['top']}")
+        fc = (f"[0:v]{crop},split=2[fg][bg];"
+              f"[bg]scale={W}:{H}:force_original_aspect_ratio=increase,"
+              f"crop={W}:{H},gblur=sigma=24[bg2];"
+              f"[fg]scale={W}:{H}:force_original_aspect_ratio=decrease[fg2];"
+              f"[bg2][fg2]overlay=(W-w)/2:(H-h)/2,setsar=1,{zp}[z];"
+              f"[z][1:v]overlay=0:0{fade},format=yuv420p[o]")
+    else:
+        ct = CROP_TOP.get(clip, 0)
+        cb = CROP_BOTTOM.get(clip, 0)
+        pre = f"crop=iw:ih-{ct + cb}:0:{ct}," if (ct or cb) else ""
+        fc = (f"[0:v]{pre}scale={W}:{H}:force_original_aspect_ratio=increase,"
+              f"crop={W}:{H},setsar=1,{zp}[z];"
+              f"[z][1:v]overlay=0:0{fade},format=yuv420p[o]")
     out = os.path.join(TMP, f"{name}.mp4")
     run([FF, "-y", "-ss", str(ss), "-t", str(dur), "-i", src, "-i", scrim,
          "-filter_complex", fc, "-map", "[o]", "-an", "-r", str(FPS),
