@@ -86,12 +86,12 @@ to letter on each figure.
 ## Do the same for Thanksgiving & Easter
 Same idea, different figures (these use **base price + add a figure**, no size variants):
 
-**Pilgrim Turkey** ($46 base)
+**Pilgrim Turkey** ($24.99 base)
 - Option: "How many pilgrims?" (1–8) → **+$9.99 each**
 - Conditional "Name on Pilgrim #1…#8" boxes
 - "Boy or girl?" dropdown per pilgrim (black hat / white bonnet)
 
-**Easter Egg** ($38 base)
+**Easter Egg** ($24.99 base)
 - Option: "How many bunnies?" → **+$9.99 each**
 - Conditional "Name on Bunny #1…#N" boxes
 - "Color?" per bunny (blue / pink)

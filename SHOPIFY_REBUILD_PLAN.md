@@ -709,10 +709,10 @@ adds a clay figure for each family member at $9.99. Example: Medium ($19.99) + 4
 | Cat Magnet | **$9.99** | colors: White/Grey/Black/Tan (+name) |
 | Personalized Family Star | **$6.99** | topper / dated keepsake |
 | Clay Angel Ornament | **$11.50** | standalone keepsake |
-| Family Home & Tree Ornament | **$36** | hanging ornament (+name figures) |
-| 🦃 Pilgrim Turkey | **$46** | Thanksgiving centerpiece; add pilgrims |
+| Family Home & Tree Ornament | **$13.99** | base hanging ornament; add figures ($9.99 ea) |
+| 🦃 Pilgrim Turkey | **$24.99** | Thanksgiving centerpiece; add pilgrims ($9.99 ea) |
 | 🦃 Pilgrim Figure | **$9.99** | Boy (black hat) / Girl (bonnet) (+name) |
-| 🐰 Easter Egg Keepsake | **$38** | Easter centerpiece; add bunnies |
+| 🐰 Easter Egg Keepsake | **$24.99** | Easter centerpiece; add bunnies ($9.99 ea) |
 | 🐰 Easter Bunny Figure | **$9.99** | Blue / Pink (+name) |
 
 *Removed: clay heart magnet and memorial magnet (per owner). Hearts still appear as included
