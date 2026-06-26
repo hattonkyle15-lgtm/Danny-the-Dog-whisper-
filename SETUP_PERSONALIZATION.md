@@ -28,16 +28,17 @@ Install from the Shopify App Store → open the app → it adds an "Options" sec
 In the import CSV, the tree is **one product** — `Personalized Family Christmas Tree` — with **4
 size variants**:
 
-| Size | For | Price |
+| Size | For | Base Price |
 |---|---|---|
-| Small | 2–3 names | $49 |
-| Medium | 4 names | $62 |
-| Large | 5–6 names | $75 |
-| XL | 6+ names | $89 |
+| Small | 2–3 names | $16.99 |
+| Medium | 4 names | $19.99 |
+| Large | 5–6 names | $21.99 |
+| XL | 6+ names | $23.99 |
 
-The **size dropdown** comes from these variants automatically. The **name fields** come from the app
-(below). *(Pricing here is by size — the figures that fit that size are included, and names are free
-text. **Extra/add-on Santa heads beyond the size are $9.99 each**; pets/hearts are paid add-ons too.)*
+The **size dropdown** comes from these variants automatically. The **name fields + per-figure
+pricing** come from the app (below). *(Pricing model: the size price is the **base tree**, and each
+**Santa head you add is $9.99** with a name. Pets are also $9.99 each. So a Medium tree with 4 Santa
+heads = $19.99 + 4 × $9.99.)*
 
 ---
 
@@ -50,8 +51,8 @@ Small / Medium / Large / XL with their prices. That's your "pick a size" step �
 ### 2. Add the name fields (the core of what you asked for)
 In the options app, create an **Option Set** and attach it to the Family Tree product. Add fields:
 
-- **Field 1 — "How many Santa heads?"** → type: **Dropdown** → values **2, 3, 4, 5, 6, 7, 8**
-  *(extra Santa heads beyond what the size includes = +$9.99 each)*
+- **Field 1 — "How many Santa heads?"** → type: **Dropdown** → values **2, 3, 4, 5, 6, 7, 8** →
+  set **+$9.99 per head** (so the price climbs as they add people)
 - **Field 2 — "Name on Santa #1"** → type: **Text box** → *Required*
 - **Field 3 — "Name on Santa #2"** → Text box → *Required*
 - **Field 4 — "Name on Santa #3"** → Text box
@@ -69,9 +70,10 @@ Stacy. Pick 6, six boxes appear. Exactly your example.
 
 ### 4. (Optional) Add the extras as paid add-ons
 In the same option set, add:
-- **"Add a pet?"** → Dropdown: None / Dog (+$9.99) / Cat (+$9.99) → plus a **"Pet's name"** text box
-  (show only if a pet is chosen) and a **"Pet fur color"** box.
-- **"Add hearts?"** → Dropdown with **+$8** each.
+- **"Add a dog?"** → Dropdown: None / Black / Grey / White / Brown / Tan (**+$9.99**) → plus a
+  **"Dog's name"** text box (show only if a color is chosen).
+- **"Add a cat?"** → Dropdown: None / White / Grey / Black / Tan (**+$9.99**) → plus a **"Cat's name"**
+  text box.
 - **"Family name for the star"** → Text box (Required) — this is the star topper wording.
 
 ### 5. Save & preview
@@ -84,27 +86,29 @@ to letter on each figure.
 ## Do the same for Thanksgiving & Easter
 Same idea, different figures (these use **base price + add a figure**, no size variants):
 
-**Pilgrim Turkey**
-- Option: "How many pilgrims?" (1–8) → optional +$12 each
+**Pilgrim Turkey** ($46 base)
+- Option: "How many pilgrims?" (1–8) → **+$9.99 each**
 - Conditional "Name on Pilgrim #1…#8" boxes
 - "Boy or girl?" dropdown per pilgrim (black hat / white bonnet)
 
-**Easter Egg**
-- Option: "How many bunnies?" → optional +$12 each
+**Easter Egg** ($38 base)
+- Option: "How many bunnies?" → **+$9.99 each**
 - Conditional "Name on Bunny #1…#N" boxes
-- "Boy or girl?" per bunny (purple bow tie / pink bow)
+- "Color?" per bunny (blue / pink)
 - "Wording on the egg" → Text box (default "Happy Easter," or family name)
 
 ---
 
 ## Pricing models (pick one)
 
-**Selected: by size, figures included.** The size price covers the figures that fit that size; names
-are free text. **Extra Santa heads beyond the size are $9.99 each**, and pets ($9.99) / hearts ($8) are
-paid add-ons. This is the current CSV setup and works the moment you import.
+**Base tree + per figure.** The size price is the base tree ($16.99–$23.99). Each **Santa head is
+$9.99** (with a name), and each **pet is $9.99** (with a color + name). So the total climbs as the
+customer adds family members.
 
-> If you ever want to charge **per Santa head from the start** instead, lower the size base prices and
-> set the "How many Santa heads?" dropdown to **+$9.99 each** in the app — no re-import needed.
+Example: **Medium tree ($19.99) + 4 Santa heads (4 × $9.99 = $39.96) = $59.95.**
+
+> The per-head price lives on the "How many Santa heads?" dropdown in the app, so you can change it
+> anytime without re-importing.
 
 ---
 

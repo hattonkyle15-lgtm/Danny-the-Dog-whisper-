@@ -551,7 +551,7 @@ box between seasons. With a little everyday care, your keepsake will last for ge
 
 **Handmade-to-order, shipped with care.**
 - **Processing:** Most orders are handcrafted and ship within **3–5 business days**.
-- **Shipping:** Calculated at checkout. **Free shipping on orders over $75.**
+- **Shipping:** **Flat $9.99**, and **FREE on orders over $75.**
 - **Holiday cutoff:** Order by **December 15** for guaranteed Christmas delivery (final date
   posted each season in the announcement bar).
 - **Local pickup:** FREE — select **Local Pickup** at checkout, and we'll email you with pickup
@@ -695,36 +695,35 @@ grid + a few vertical (4:5) for mobile, and keep editing consistent (slightly wa
 
 ## 22. Quick Pricing Summary Table
 
-| Product | Old Price | New Price | Tier |
-|---|---|---|---|
-| Family of 2 — Sweetheart Tree | $28.99 | **$44** | Good |
-| Family of 3 — Little Family | ~$33 | **$52** | Good+ |
-| Family of 4 — Family of Four | ~$38 | **$59** | Better (bestseller) |
-| Family of 5 | ~$43 | **$67** | Better |
-| Family of 6 | ~$48 | **$76** | Best- |
-| Family of 7 | ~$54 | **$85** | Best |
-| Family of 8 — Grand Tree | $60.99 | **$99** | Best (flagship) |
-| Family Home & Tree Ornament | $18.50 | **$36** | Standalone ornament |
-| Santa Head Figure (add-on) | ~$7 | **$9.99** | Add-on |
-| Dog Magnet (5 fur colors) | — | **$9.99** | Add-on |
-| Cat Magnet (5 fur colors) | — | **$9.99** | Add-on |
-| Clay Heart Magnet | — | **$8** | Add-on |
-| Personalized Family Star (topper/dated) | — | **$10** | Add-on |
-| Clay Angel Ornament | — | **$16** | Standalone ornament |
-| Memorial Magnet | — | **$12** | Add-on |
-| 🦃 Pilgrim Turkey (Thanksgiving centerpiece) | — | **$46** | Centerpiece (+ figures) |
-| 🦃 Pilgrim Figure (boy/girl, add-on) | — | **$9.99** | Add-on |
-| 🐰 Easter Egg Keepsake (centerpiece) | — | **$38** | Centerpiece (+ figures) |
-| 🐰 Easter Bunny Figure (boy/girl, add-on) | — | **$9.99** | Add-on |
-| Couple's Keepsake bundle | — | **$59** | Bundle |
-| Family Bundle | — | **$84** | Bundle (popular) |
-| Grandparent Gift Set | — | **$99** | Bundle |
-| Heirloom Set | — | **$119** | Bundle (flagship) |
+**Pricing model: base tree + $9.99 per figure.** The customer picks a tree size (base price), then
+adds a clay figure for each family member at $9.99. Example: Medium ($19.99) + 4 Santa heads = $59.95.
 
-*Note: family-tree prices were raised from the earlier draft ($42–$89) to $44–$99 after seeing
-the real product — a substantial standing wood tree with base, bow, family-name star, and a
-hand-sculpted clay figure per person. That's far more labor than a flat ornament, and the old
-$28.99–$60.99 pricing badly undervalued it.*
+| Product | Price | Notes |
+|---|---|---|
+| 🎄 Family Tree — Small (2–3) | **$16.99** | base; add figures |
+| 🎄 Family Tree — Medium (4) | **$19.99** | base; add figures |
+| 🎄 Family Tree — Large (5–6) | **$21.99** | base; add figures |
+| 🎄 Family Tree — XL (6+) | **$23.99** | base; add figures |
+| Santa Head Figure | **$9.99** | add a family member (+name) |
+| Dog Magnet | **$9.99** | colors: Black/Grey/White/Brown/Tan (+name) |
+| Cat Magnet | **$9.99** | colors: White/Grey/Black/Tan (+name) |
+| Personalized Family Star | **$6.99** | topper / dated keepsake |
+| Clay Angel Ornament | **$11.50** | standalone keepsake |
+| Family Home & Tree Ornament | **$36** | hanging ornament (+name figures) |
+| 🦃 Pilgrim Turkey | **$46** | Thanksgiving centerpiece; add pilgrims |
+| 🦃 Pilgrim Figure | **$9.99** | Boy (black hat) / Girl (bonnet) (+name) |
+| 🐰 Easter Egg Keepsake | **$38** | Easter centerpiece; add bunnies |
+| 🐰 Easter Bunny Figure | **$9.99** | Blue / Pink (+name) |
+
+*Removed: clay heart magnet and memorial magnet (per owner). Hearts still appear as included
+decorative accents on the trees. The earlier size-specific gift bundles were folded into the
+configurable tree + add-ons.*
+
+## 22b. Shipping
+- **Free shipping on orders over $75.**
+- **Flat $9.99** shipping on all orders under $75.
+- Free **local pickup** available at checkout.
+- Set in **Settings → Shipping**: one zone with a $9.99 flat rate and a free rate that unlocks at $75.
 
 ---
 
