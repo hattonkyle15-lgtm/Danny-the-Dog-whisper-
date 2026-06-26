@@ -450,7 +450,8 @@ family at Christmas. I wanted keepsakes that actually *meant* something — piec
 on them, made by hand, that we'd pull out and treasure every December. Friends wanted their own.
 Then friends of friends. And a little holiday workshop was born.
 
-Today, I still make every tree and every magnet by hand, right here in [City, State]. Nothing is
+Today, I still make every tree and every magnet by hand, right here in my home workshop. Each
+magnet is sculpted from oven-baked clay, hand-lettered, and made to last. Nothing is
 mass-produced. Nothing is off a shelf. When you order, you're not getting a factory product —
 you're getting a little piece of my workshop, made for your family.
 
@@ -507,8 +508,9 @@ box between seasons. With a little everyday care, your keepsake will last for ge
 - **Shipping:** Calculated at checkout. **Free shipping on orders over $75.**
 - **Holiday cutoff:** Order by **December 15** for guaranteed Christmas delivery (final date
   posted each season in the announcement bar).
-- **Local pickup:** FREE — select **Local Pickup** at checkout. We'll email you when it's ready
-  for pickup in [City, State].
+- **Local pickup:** FREE — select **Local Pickup** at checkout, and we'll email you with pickup
+  details the moment your order is ready. *(Set your pickup address and hours in Shopify →
+  Settings → Locations so they show automatically at checkout.)*
 - **Damaged or wrong?** We'll replace it free — just send a photo within 7 days of delivery.
 - **Tracking:** You'll get an email with tracking the moment your keepsake ships.
 
