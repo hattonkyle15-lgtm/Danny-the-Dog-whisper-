@@ -51,8 +51,9 @@ clay by Sue — a keepsake your family rebuilds and adds to every Christmas.
 **Brand pillars:** Warm · Hand-Sculpted Clay · Family-owned · Personalized · Giftable · Made in USA
 
 **Key differentiator to lean on everywhere:** these aren't printed or factory-made ornaments —
-every single magnet is **sculpted by hand from clay**, so no two are identical. That's the story
-that justifies premium pricing and makes each keepsake feel like a one-of-a-kind heirloom.
+every single magnet is **sculpted by hand from oven-baked clay** — hardened to last for
+generations, and no two ever identical. That's the story that justifies premium pricing and
+makes each keepsake feel like a one-of-a-kind heirloom.
 
 **Color palette (premium, not cheap):**
 - Evergreen `#1F4733` (primary)
@@ -477,10 +478,10 @@ mid-December) for guaranteed holiday delivery. Need it fast? Email us first.
 **Are these really handmade?** Yes — every piece is made by hand by Sue. No two are identical,
 and that's the magic.
 
-**What are the trees and magnets made of?** Every magnet is **hand-sculpted from clay** and
-hand-lettered by Sue, then fitted with a magnet so it holds firmly and rearranges easily on your
-tree. Because each piece is sculpted by hand, no two are ever exactly alike — that's the magic of
-a true handmade keepsake.
+**What are the trees and magnets made of?** Every magnet is **hand-sculpted from oven-baked
+clay** and hand-lettered by Sue, then fitted with a magnet so it holds firmly and rearranges
+easily on your tree. Baking hardens the clay into a durable, long-lasting keepsake — and because
+each piece is sculpted by hand, no two are ever exactly alike.
 
 **Can I add more family members later?** Absolutely — order add-on magnets anytime and they'll
 match your tree.
@@ -493,9 +494,9 @@ match your tree.
 custom items, but if anything arrives damaged or incorrect, we'll **replace it free**. Your
 happiness is the whole point.
 
-**How do I care for it?** Your clay magnets are durable but handmade — dust gently with a soft
-dry cloth, keep them out of direct heat or sunlight (clay can soften), and store them flat in
-their box between seasons. Treated with a little care, your keepsake will last for generations.
+**How do I care for it?** Your magnets are sculpted from oven-baked clay, so they're hardened,
+durable, and built to last. Just dust gently with a soft dry cloth and store them flat in their
+box between seasons. With a little everyday care, your keepsake will last for generations.
 
 ---
 
