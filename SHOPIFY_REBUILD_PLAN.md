@@ -45,10 +45,19 @@ The current site (Wix) is functional but leaves a lot of money and trust on the 
 
 **Brand:** Sue's Holiday Creations
 **Tagline:** *Handmade Family Keepsakes, One Magnet at a Time.*
-**One-liner:** Personalized magnetic family trees and ornaments, each magnet hand-sculpted from
-clay by Sue — a keepsake your family rebuilds and adds to every Christmas.
+**One-liner:** Personalized standing family Christmas trees — a glittered wood tree topped with
+your family-name star, with a magnetic, hand-sculpted clay Santa-head figure for every person you
+love. A keepsake your family rearranges and adds to every Christmas.
 
-**Brand pillars:** Warm · Hand-Sculpted Clay · Family-owned · Personalized · Giftable · Made in USA
+**What the product actually is (so all copy stays accurate):** a hand-cut, glitter-edged green
+wood tree on a round wood base, finished with a red organza bow, topped with a personalized star
+hand-lettered with the family's name. Each family member is a **magnetic, hand-sculpted clay
+Santa-head figure** with their name hand-lettered on the hat; little clay hearts accent the tree.
+Because the figures are magnetic, families rearrange them and add more over the years. There is
+also a flat **house-and-tree hanging ornament** version, plus add-on figures (pets, angels,
+hearts, extra names).
+
+**Brand pillars:** Warm · Hand-Sculpted Clay · Personalized · Family-owned · Giftable · Made in USA
 
 **Key differentiator to lean on everywhere:** these aren't printed or factory-made ornaments —
 every single magnet is **sculpted by hand from oven-baked clay** — hardened to last for
@@ -180,9 +189,10 @@ our limited holiday collection. *(We only email a few times a year — mostly to
 
 | Collection | What's in it | Purpose |
 |---|---|---|
-| **Personalized Family Trees** | Family of 2 → Family of 8 | Hero / highest revenue |
-| **Add-On Magnets & Ornaments** | Santa heads, pet paws, hearts, stars, houses | Upsell / AOV |
-| **Gift Sets & Bundles** | Tree + extra magnets + gift box | Higher AOV, gifting |
+| **Standing Family Trees** | Family of 2 → Family of 8 standing trees | Hero / highest revenue |
+| **Ornaments** | Family Home & Tree hanging ornament, clay angel | Hanging keepsakes / gifts |
+| **Add-On Figures & Magnets** | Santa-head name figures, dog & cat magnets, hearts, family star, memorial | Upsell / AOV |
+| **Gift Sets & Bundles** | Tree + extra figures + gift box | Higher AOV, gifting |
 | **Custom & Personalized Orders** | Build-your-own, large families, special requests | Premium/custom tier |
 | **Best Sellers** (auto) | Top performers | Social proof / merchandising |
 
@@ -195,7 +205,14 @@ our limited holiday collection. *(We only email a few times a year — mostly to
 > prices. We use Good / Better / Best anchoring. New prices below are realistic for handmade
 > personalized holiday decor and still under "big box premium ornament" pricing.
 
-### CORE LINE — Personalized Family Trees (Good / Better / Best)
+> **⚠️ Authoritative copy lives in `shopify_products_import.csv`.** After seeing the real
+> products, the family tree is a **standing glittered wood tree on a base with a red bow, a
+> personalized family-name star, and a magnetic clay Santa-head figure per family member** — not
+> loose magnets on a mantel. The CSV descriptions and final prices ($44–$99) reflect this; the
+> entries below are kept for the naming/pricing rationale, but where wording differs, **the CSV
+> wins.** Photo ideas referencing a "mantel" should be read as "styled on a shelf/table."
+
+### CORE LINE — Personalized Standing Family Trees (Good / Better / Best)
 
 ---
 
@@ -651,23 +668,30 @@ grid + a few vertical (4:5) for mobile, and keep editing consistent (slightly wa
 
 | Product | Old Price | New Price | Tier |
 |---|---|---|---|
-| Family of 2 — Sweetheart Tree | $28.99 | **$42** | Good |
-| Family of 3 — Little Family | ~$33 | **$49** | Good+ |
-| Family of 4 — Family of Four | ~$38 | **$56** | Better (bestseller) |
-| Family of 5 | ~$43 | **$64** | Better |
-| Family of 6 | ~$48 | **$72** | Best- |
-| Family of 7 | ~$54 | **$79** | Best |
-| Family of 8 — Grand Tree | $60.99 | **$89** | Best (flagship) |
-| Santa Head Magnet (add-on) | ~$7 | **$12** (2/$20) | Add-on |
-| Pet Paw Magnet | — | **$10** | Add-on |
-| Heart Magnet | — | **$9** | Add-on |
-| Dated Year Star | — | **$9** | Add-on |
-| House Ornament | $18.50 | **$26** | Standalone |
+| Family of 2 — Sweetheart Tree | $28.99 | **$44** | Good |
+| Family of 3 — Little Family | ~$33 | **$52** | Good+ |
+| Family of 4 — Family of Four | ~$38 | **$59** | Better (bestseller) |
+| Family of 5 | ~$43 | **$67** | Better |
+| Family of 6 | ~$48 | **$76** | Best- |
+| Family of 7 | ~$54 | **$85** | Best |
+| Family of 8 — Grand Tree | $60.99 | **$99** | Best (flagship) |
+| Family Home & Tree Ornament | $18.50 | **$36** | Standalone ornament |
+| Santa Head Figure (add-on) | ~$7 | **$12** | Add-on |
+| Dog Magnet (5 fur colors) | — | **$12** | Add-on |
+| Cat Magnet (5 fur colors) | — | **$12** | Add-on |
+| Clay Heart Magnet | — | **$8** | Add-on |
+| Personalized Family Star (topper/dated) | — | **$10** | Add-on |
+| Clay Angel Ornament | — | **$16** | Standalone ornament |
 | Memorial Magnet | — | **$12** | Add-on |
 | Couple's Keepsake bundle | — | **$59** | Bundle |
 | Family Bundle | — | **$84** | Bundle (popular) |
-| Grandparent Gift Set | — | **$99–$109** | Bundle |
+| Grandparent Gift Set | — | **$99** | Bundle |
 | Heirloom Set | — | **$119** | Bundle (flagship) |
+
+*Note: family-tree prices were raised from the earlier draft ($42–$89) to $44–$99 after seeing
+the real product — a substantial standing wood tree with base, bow, family-name star, and a
+hand-sculpted clay figure per person. That's far more labor than a flat ornament, and the old
+$28.99–$60.99 pricing badly undervalued it.*
 
 ---
 
