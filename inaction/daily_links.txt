@@ -1,0 +1,16 @@
+# daily_links.txt — one TikTok URL per line. Lines starting with # are ignored.
+#
+# Every 4 links = one Short. Order = ranking (1->#4, 2->#3, 3->#2, 4->#1 best).
+# Put the strongest clip 4th in each group. 20 links = 5 shorts.
+#
+# ----- SHORT 1 -----
+# https://www.tiktok.com/@user/video/1111111111   <- becomes #4
+# https://www.tiktok.com/@user/video/2222222222   <- becomes #3
+# https://www.tiktok.com/@user/video/3333333333   <- becomes #2
+# https://www.tiktok.com/@user/video/4444444444   <- becomes #1 (best)
+#
+# ----- SHORT 2 -----
+# ...four more links...
+#
+# Replace the examples above with real URLs, remove the leading "# ", and run:
+#   ./make_daily.sh
