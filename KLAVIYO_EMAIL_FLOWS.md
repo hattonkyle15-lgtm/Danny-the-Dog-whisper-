@@ -20,7 +20,7 @@ body). Build each in Klaviyo → Flows → Create Flow.
 - **Preview:** Your code's inside, plus a little hello from Sue.
 - **Body:**
   Hi there, and welcome!
-  I'm Sue, and I handmake every keepsake in my little workshop — so it means a lot to have you here.
+  I'm Sue, and I hand-sculpt every keepsake from clay in my little workshop — so it means a lot to have you here.
   As promised, here's **10% off your first order**:
   **Code: WELCOME10**
   Every tree and magnet is personalized and made by hand, just for your family.
@@ -72,7 +72,8 @@ body). Build each in Klaviyo → Flows → Create Flow.
 - **Preview:** Handmade, personalized, and shipped with care.
 - **Body:**
   Just in case it helps:
-  • **Personalized free** — send us your names, we hand-letter every magnet.
+  • **Hand-sculpted from clay** — every magnet is shaped and lettered by hand, so no two are alike.
+  • **Personalized free** — just send us your family's names.
   • **Ships in 3–5 days**, carefully packed and ready to gift.
   • **Made by hand in the USA** — no two are exactly alike.
   *"It made my mom cry — every grandkid's name was on it." — a happy customer*

@@ -45,10 +45,14 @@ The current site (Wix) is functional but leaves a lot of money and trust on the 
 
 **Brand:** Sue's Holiday Creations
 **Tagline:** *Handmade Family Keepsakes, One Magnet at a Time.*
-**One-liner:** Personalized magnetic family trees and ornaments, handcrafted by Sue —
-a keepsake your family rebuilds and adds to every Christmas.
+**One-liner:** Personalized magnetic family trees and ornaments, each magnet hand-sculpted from
+clay by Sue — a keepsake your family rebuilds and adds to every Christmas.
 
-**Brand pillars:** Warm · Handmade · Family-owned · Personalized · Giftable · Made in USA
+**Brand pillars:** Warm · Hand-Sculpted Clay · Family-owned · Personalized · Giftable · Made in USA
+
+**Key differentiator to lean on everywhere:** these aren't printed or factory-made ornaments —
+every single magnet is **sculpted by hand from clay**, so no two are identical. That's the story
+that justifies premium pricing and makes each keepsake feel like a one-of-a-kind heirloom.
 
 **Color palette (premium, not cheap):**
 - Evergreen `#1F4733` (primary)
@@ -139,7 +143,7 @@ person (and pet) you love. Crafted by hand by Sue, made to last for generations.
 **Hero button:** Build Your Family Tree →
 **Secondary link:** See how it works
 
-**Trust strip:** Handmade by Sue · Free Personalization · Made in the USA · Ships in 3–5 Days
+**Trust strip:** Hand-Sculpted Clay · Free Personalization · Made in the USA · Ships in 3–5 Days
 
 **How It Works heading:** Your Family, Handcrafted in Three Easy Steps
 1. **Choose your tree.** Pick the size that fits your family — from a cozy two to a full house of eight.
@@ -473,8 +477,10 @@ mid-December) for guaranteed holiday delivery. Need it fast? Email us first.
 **Are these really handmade?** Yes — every piece is made by hand by Sue. No two are identical,
 and that's the magic.
 
-**What are the trees and magnets made of?** [Materials — e.g., metal/wood base with magnetic
-personalized pieces]. Magnets hold firmly and rearrange easily.
+**What are the trees and magnets made of?** Every magnet is **hand-sculpted from clay** and
+hand-lettered by Sue, then fitted with a magnet so it holds firmly and rearranges easily on your
+tree. Because each piece is sculpted by hand, no two are ever exactly alike — that's the magic of
+a true handmade keepsake.
 
 **Can I add more family members later?** Absolutely — order add-on magnets anytime and they'll
 match your tree.
@@ -487,7 +493,9 @@ match your tree.
 custom items, but if anything arrives damaged or incorrect, we'll **replace it free**. Your
 happiness is the whole point.
 
-**How do I care for it?** Wipe gently with a dry cloth; store flat with magnets in their box.
+**How do I care for it?** Your clay magnets are durable but handmade — dust gently with a soft
+dry cloth, keep them out of direct heat or sunlight (clay can soften), and store them flat in
+their box between seasons. Treated with a little care, your keepsake will last for generations.
 
 ---
 
@@ -622,7 +630,8 @@ For a premium feel, replace DIY snapshots with:
    garland, soft daylight. (Homepage hero.)
 2. **Clean product-on-white** — every product shot on a clean cream/white background, consistent
    angle and lighting, for the shop grid.
-3. **Macro detail** — close-ups of the hand-lettered personalization (this *sells* "handmade").
+3. **Macro detail** — extreme close-ups of the hand-sculpted clay texture and hand-lettered
+   names (the visible fingerprints-of-the-maker shots are what *sell* "handmade clay").
 4. **Scale shot** — product in-hand so size is obvious.
 5. **Gift-box presentation** — the keepsake in/next to premium packaging (justifies gift pricing).
 6. **In-use / human** — a child or grandparent placing a magnet; hands arranging the tree.
