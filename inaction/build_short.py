@@ -298,6 +298,10 @@ def main():
         ]
         TOTAL = INTRO[3] + sum(s[3] for s in SEGMENTS) + END_DUR
 
+    build()
+
+
+def build():
     os.makedirs(TMP, exist_ok=True)
     scrim = make_scrim()
     pieces = [normalize_clip(*INTRO, scrim, zoom=True, flash=False)]

@@ -1,5 +1,6 @@
 build/
 _build/
+set6/_build/
 clips/*.mp4
 !clips/*.placeholder.mp4
 __pycache__/
