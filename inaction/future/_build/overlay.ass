@@ -1,0 +1,27 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Rank,DejaVu Sans,150,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,7,4,5,40,40,40,1
+Style: Phrase,DejaVu Sans,76,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,6,3,5,40,40,40,1
+Style: End,DejaVu Sans,92,&H0066E0FF,&H0066E0FF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,7,4,5,40,40,40,1
+Style: Ends,DejaVu Sans,74,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,6,3,5,40,40,40,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.50,Rank,,0,0,0,,{\an5\pos(540,640)\fad(60,80)\fscx70\fscy70\t(0,140,\fscx108\fscy108)\t(140,240,\fscx100\fscy100)}#1 melted me…
+Dialogue: 0,0:00:00.50,0:00:03.00,Rank,,0,0,0,,{\an5\pos(540,360)\fad(70,120)\fscx55\fscy55\t(0,170,\fscx108\fscy108)\t(170,280,\fscx100\fscy100)}#4
+Dialogue: 0,0:00:00.50,0:00:03.00,Phrase,,0,0,0,,{\an5\pos(540,600)\fad(150,120)}Best road\Ntrip buddy
+Dialogue: 0,0:00:03.00,0:00:05.50,Rank,,0,0,0,,{\an5\pos(540,360)\fad(70,120)\fscx55\fscy55\t(0,170,\fscx108\fscy108)\t(170,280,\fscx100\fscy100)}#3
+Dialogue: 0,0:00:03.00,0:00:05.50,Phrase,,0,0,0,,{\an5\pos(540,600)\fad(150,120)}He picked her
+Dialogue: 0,0:00:05.50,0:00:08.50,Rank,,0,0,0,,{\an5\pos(540,360)\fad(70,120)\fscx55\fscy55\t(0,170,\fscx108\fscy108)\t(170,280,\fscx100\fscy100)}#2
+Dialogue: 0,0:00:05.50,0:00:08.50,Phrase,,0,0,0,,{\an5\pos(540,600)\fad(150,120)}Pure devotion
+Dialogue: 0,0:00:08.50,0:00:14.50,Rank,,0,0,0,,{\an5\pos(540,360)\fad(70,120)\fscx55\fscy55\t(0,170,\fscx108\fscy108)\t(170,280,\fscx100\fscy100)}#1
+Dialogue: 0,0:00:08.50,0:00:14.50,Phrase,,0,0,0,,{\an5\pos(540,600)\fad(150,120)}He just\Nmoved in
+Dialogue: 0,0:00:14.50,0:00:15.50,End,,0,0,0,,{\an5\pos(540,820)\fad(160,0)}Which one melted you?
+Dialogue: 0,0:00:14.50,0:00:15.50,Ends,,0,0,0,,{\an5\pos(540,1000)\fad(160,0)}#4   #3   #2   #1

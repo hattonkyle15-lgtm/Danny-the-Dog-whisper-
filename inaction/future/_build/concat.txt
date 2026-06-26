@@ -1,0 +1,6 @@
+file '/home/user/Danny-the-Dog-whisper-/inaction/future/_build/intro.mp4'
+file '/home/user/Danny-the-Dog-whisper-/inaction/future/_build/seg4.mp4'
+file '/home/user/Danny-the-Dog-whisper-/inaction/future/_build/seg3.mp4'
+file '/home/user/Danny-the-Dog-whisper-/inaction/future/_build/seg2.mp4'
+file '/home/user/Danny-the-Dog-whisper-/inaction/future/_build/seg1.mp4'
+file '/home/user/Danny-the-Dog-whisper-/inaction/future/_build/end.mp4'

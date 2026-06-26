@@ -59,12 +59,10 @@ FF = ffmpeg_bin()
 INCLUDE_AUDIO = False
 
 # In-point (seconds) into each clip for its strongest moment. Tune these.
-# VIDEO 5 — "Animals that trust humans".
-# clip1=#3 kangaroo(moved in), clip2=#2 dog(kisses owner), clip3=#4 chipmunk(hand-fed), clip4=#1 koala
-START_AT = {"clip1.mp4": 40.0, "clip2.mp4": 38.0, "clip3.mp4": 8.0, "clip4.mp4": 48.0}
-
-# Opening 0.5s flash points at the #1 clip's peak (the koala in her arms).
-INTRO_FLASH_AT = 49.0
+# FUTURE #3 — "Act Like They're Human" (kangaroo in the house as #1).
+# clip1=#3 horse, clip2=#2 dog, clip3=#4 roadtrip dog, clip4=#1 kangaroo moved in
+START_AT = {"clip1.mp4": 53.0, "clip2.mp4": 47.0, "clip3.mp4": 52.0, "clip4.mp4": 38.0}
+INTRO_FLASH_AT = 40.0
 
 # (name, clip, in-point, duration)
 INTRO = ("intro", "clip4.mp4", INTRO_FLASH_AT, 0.5)
@@ -81,13 +79,13 @@ TOTAL = INTRO[3] + sum(s[3] for s in SEGMENTS) + END_DUR  # 15.5s
 CUES = [
     (0.0,  0.5,  "Rank",  "#1 melted me…"),
     (0.5,  3.0,  "Rank",  "#4"),
-    (0.5,  3.0,  "Phrase", "He trusts\\Ncompletely"),
+    (0.5,  3.0,  "Phrase", "Best road\\Ntrip buddy"),
     (3.0,  5.5,  "Rank",  "#3"),
-    (3.0,  5.5,  "Phrase", "He just moved in"),
+    (3.0,  5.5,  "Phrase", "He picked her"),
     (5.5,  8.5,  "Rank",  "#2"),
-    (5.5,  8.5,  "Phrase", "She does this\\Nevery time"),
+    (5.5,  8.5,  "Phrase", "Pure devotion"),
     (8.5,  14.5, "Rank",  "#1"),
-    (8.5,  14.5, "Phrase", "She trusts\\Nher human"),
+    (8.5,  14.5, "Phrase", "He just\\Nmoved in"),
     (14.5, 15.5, "End",   "Which one melted you?"),
     (14.5, 15.5, "Ends",  "#4   #3   #2   #1"),
 ]
@@ -199,8 +197,8 @@ def resolve_src(clip):
 
 # Source clips have the original creator's captions burned in. Crop this many
 # pixels off the top / bottom of each to remove them (subject stays centre-frame).
-CROP_TOP = {}
-CROP_BOTTOM = {"clip1.mp4": 525, "clip2.mp4": 560, "clip3.mp4": 290}
+CROP_TOP = {"clip3.mp4": 300}
+CROP_BOTTOM = {"clip2.mp4": 560, "clip4.mp4": 520}
 # Clips whose subject is a short, wide strip boxed in by burned-in captions/badges:
 # crop the captions off, then show the WHOLE strip fitted over a blurred fill so
 # the subject is never sliced. dict = pixels cropped off (top,bottom,left,right).
