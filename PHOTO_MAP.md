@@ -24,15 +24,21 @@ plain tree / close-up as image 2.
 
 ## The Map
 
-| Save the JPG as… | Product in Shopify | Which photo it is |
+> **Note:** the 7 "Family of X" trees are now **one product** — `Personalized Family Christmas
+> Tree` — with Small/Medium/Large/XL size variants. So **all the named-figure tree photos go on
+> that single product** as a gallery (Shopify allows many images per product). You can also assign
+> a size-appropriate photo to each size **variant** (e.g., the 2-figure tree on "Small," the
+> 8-figure tree on "XL"). Suggested variant assignments below.
+
+| Save the JPG as… | Where it goes | Which photo it is |
 |---|---|---|
-| `grand-family-tree-family-of-8` | Family of 8 — Grand Tree | Standing tree, **"Hatton Family"** star, ~8 named figures |
-| `family-of-seven-keepsake-tree` | Family of 7 | Standing tree, **"Santos Family"** star, ~7 figures |
-| `family-of-six-keepsake-tree` | Family of 6 | Standing tree, **"Santos/Harbor"** star, ~6 figures |
-| `family-of-five-keepsake-tree` | Family of 5 | *(use a plain green tree shot — see notes)* |
-| `family-of-four-keepsake-tree` | Family of 4 | **"Harbor Family"** tree — Grayson, Sharon, Nathen, Tracey |
-| `little-family-tree-family-of-3` | Family of 3 | **"Yanec Family"** tree — Keith, Debbie, Lydia |
-| `sweetheart-tree-family-of-2` | Family of 2 — Sweetheart | **"Yanec Family"** tree — Keith & Debbie (2 figures) |
+| `family-tree-xl` | Family Tree → **XL** variant + gallery | Standing tree, **"Hatton Family"** star, ~8 named figures |
+| `family-tree-large-b` | Family Tree → gallery (Large) | **"Santos Family"** star, ~7 figures |
+| `family-tree-large` | Family Tree → **Large** variant | **"Santos/Harbor"** star, ~6 figures |
+| `family-tree-medium` | Family Tree → **Medium** variant | **"Harbor Family"** — Grayson, Sharon, Nathen, Tracey (4) |
+| `family-tree-small-b` | Family Tree → gallery (Small) | **"Yanec Family"** — Keith, Debbie, Lydia (3) |
+| `family-tree-small` | Family Tree → **Small** variant | **"Yanec Family"** — Keith & Debbie (2 figures) |
+| `family-tree-plain` | Family Tree → gallery / **Medium** | Plain green glitter tree (no names) — clean "this is the tree" shot |
 | `family-home-tree-ornament` | Family Home & Tree Ornament | House + tree with **James/Louis/katlya** (or Louis/Janelle) |
 | `personalized-santa-head-magnet` | Santa Head Figure | Single clay Santa head (grey background) |
 | `personalized-dog-magnet` | Dog Magnet | 5 dogs clustered (tan/black/white/brown/grey) |
@@ -46,13 +52,8 @@ plain tree / close-up as image 2.
 | `easter-egg-keepsake` | Easter Egg Keepsake | Teal **"Happy Easter"** egg with daisies |
 | `personalized-bunny-figure` | Bunny Figure | 2 bunnies (purple bow tie + pink bow) |
 
-### Bundles (reuse existing photos)
-| Product | Use the photo from… |
-|---|---|
-| The Couple's Keepsake Set | `sweetheart-tree-family-of-2` |
-| The Family Bundle | `family-of-four-keepsake-tree` |
-| The Grandparent Gift Set | `family-of-six-keepsake-tree` |
-| The Heirloom Set | `grand-family-tree-family-of-8` |
+> The separate size-specific gift **bundles** were folded into the configurable tree + add-ons
+> (pets, hearts, **Add a Premium Gift Box** $8). No separate bundle photos needed.
 
 ---
 
