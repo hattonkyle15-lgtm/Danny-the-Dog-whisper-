@@ -57,6 +57,13 @@ Because the figures are magnetic, families rearrange them and add more over the 
 also a flat **house-and-tree hanging ornament** version, plus add-on figures (pets, angels,
 hearts, extra names).
 
+**Year-round, Christmas-led:** Sue makes personalized keepsakes for multiple holidays — the same
+magnetic-name-figure idea repeats across seasons: a **Christmas tree** (Santa-head figures), a
+**Thanksgiving pilgrim turkey** (pilgrim figures), and an **Easter egg** (bunny figures), each
+built so you buy the centerpiece and add a personalized figure per family member. Christmas stays
+the flagship/face of the brand (biggest season), with Easter, Thanksgiving, and room for more
+holidays as their own collections under a "Shop by Holiday" menu.
+
 **Brand pillars:** Warm · Hand-Sculpted Clay · Personalized · Family-owned · Giftable · Made in USA
 
 **Key differentiator to lean on everywhere:** these aren't printed or factory-made ornaments —
@@ -83,11 +90,20 @@ but never stuffy. Every product is a memory, not a knick-knack.
 
 ```
 Home
-Shop (all products)
-  ├─ Personalized Family Trees   (the hero collection)
-  ├─ Add-On Magnets & Ornaments  (Santa heads, pets, hearts, stars, houses)
-  ├─ Gift Sets & Bundles
-  └─ Custom & Personalized Orders
+Shop by Holiday
+  ├─ Christmas  (FLAGSHIP)
+  │    ├─ Standing Family Trees (Family of 2–8)
+  │    ├─ Ornaments (Home & Tree ornament, clay angel)
+  │    ├─ Add-On Figures & Magnets (Santa heads, dog, cat, heart, family star, memorial)
+  │    └─ Christmas Gift Sets & Bundles
+  ├─ Thanksgiving
+  │    ├─ Pilgrim Turkey (centerpiece)
+  │    └─ Pilgrim Figures (add a family member)
+  ├─ Easter
+  │    ├─ Easter Egg Keepsake (centerpiece)
+  │    └─ Bunny Figures (add a family member)
+  └─ (room to grow: Halloween, Valentine's, Patriotic, New Baby/Wedding)
+Shop All
 Custom Orders (how it works + request form)
 About (Sue's story)
 Reviews / Testimonials
@@ -96,6 +112,12 @@ Shipping & Local Pickup
 Contact
 Footer: Care Instructions · Returns/Replacements · Privacy · Email signup
 ```
+
+> **How the seasonal collections work:** every centerpiece (tree / turkey / egg) is built around
+> the same idea — buy the base, then add a personalized magnetic figure for each family member.
+> Tag products by holiday (`christmas`, `thanksgiving`, `easter`) so Shopify auto-builds each
+> collection (already set in the import CSV). Feature the current season on the homepage and swap
+> it as holidays approach; Christmas stays front-and-center Oct–Dec.
 
 ---
 
@@ -136,6 +158,9 @@ then style with the palette/fonts above. Upgrade to **Prestige** only after reve
 5. **How It Works** — 3 steps: *Pick your tree size → Tell us your family → We handcraft &
    ship*. Removes the #1 hesitation on personalized products.
 6. **Bestsellers / Add-On Magnets** — quick-add row (Santa heads, pet paws, hearts).
+6b. **Shop the Season** — a 3-tile row linking to the current holiday collections (Christmas /
+   Thanksgiving / Easter). Swap the featured season as holidays approach; keep Christmas first
+   Oct–Dec. This is how a year-round, Christmas-led brand stays relevant in every season.
 7. **Gift Sets & Bundles** banner — "The perfect grandparent gift."
 8. **Founder section** — photo of Sue + short story + "Read our story" link.
 9. **Reviews carousel** — 3–5 testimonials with star ratings and customer first names.
@@ -187,12 +212,16 @@ our limited holiday collection. *(We only email a few times a year — mostly to
 
 ## 8. Product Category Structure
 
+**Top level = "Shop by Holiday"** (tag-driven, auto-built): **Christmas** (flagship) · **Thanksgiving** · **Easter** · (future seasons). Within Christmas, sub-collections by type:
+
 | Collection | What's in it | Purpose |
 |---|---|---|
-| **Standing Family Trees** | Family of 2 → Family of 8 standing trees | Hero / highest revenue |
-| **Ornaments** | Family Home & Tree hanging ornament, clay angel | Hanging keepsakes / gifts |
-| **Add-On Figures & Magnets** | Santa-head name figures, dog & cat magnets, hearts, family star, memorial | Upsell / AOV |
-| **Gift Sets & Bundles** | Tree + extra figures + gift box | Higher AOV, gifting |
+| **Christmas › Standing Family Trees** | Family of 2 → Family of 8 standing trees | Hero / highest revenue |
+| **Christmas › Ornaments** | Family Home & Tree hanging ornament, clay angel | Hanging keepsakes / gifts |
+| **Christmas › Add-On Figures & Magnets** | Santa-head name figures, dog & cat magnets, hearts, family star, memorial | Upsell / AOV |
+| **Christmas › Gift Sets & Bundles** | Tree + extra figures + gift box | Higher AOV, gifting |
+| **Thanksgiving** | Pilgrim Turkey (centerpiece) + Pilgrim figures | Fall season revenue |
+| **Easter** | Easter Egg Keepsake (centerpiece) + Bunny figures | Spring season revenue |
 | **Custom & Personalized Orders** | Build-your-own, large families, special requests | Premium/custom tier |
 | **Best Sellers** (auto) | Top performers | Social proof / merchandising |
 
@@ -683,6 +712,10 @@ grid + a few vertical (4:5) for mobile, and keep editing consistent (slightly wa
 | Personalized Family Star (topper/dated) | — | **$10** | Add-on |
 | Clay Angel Ornament | — | **$16** | Standalone ornament |
 | Memorial Magnet | — | **$12** | Add-on |
+| 🦃 Pilgrim Turkey (Thanksgiving centerpiece) | — | **$46** | Centerpiece (+ figures) |
+| 🦃 Pilgrim Figure (boy/girl, add-on) | — | **$12** | Add-on |
+| 🐰 Easter Egg Keepsake (centerpiece) | — | **$38** | Centerpiece (+ figures) |
+| 🐰 Easter Bunny Figure (boy/girl, add-on) | — | **$12** | Add-on |
 | Couple's Keepsake bundle | — | **$59** | Bundle |
 | Family Bundle | — | **$84** | Bundle (popular) |
 | Grandparent Gift Set | — | **$99** | Bundle |
