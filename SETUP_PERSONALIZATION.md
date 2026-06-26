@@ -36,8 +36,8 @@ size variants**:
 | XL | 6+ names | $89 |
 
 The **size dropdown** comes from these variants automatically. The **name fields** come from the app
-(below). *(Pricing here includes the figures for that size; pets/hearts/extra figures are paid
-add-ons. To instead charge per Santa head, see "Option B" at the bottom.)*
+(below). *(Pricing here is by size — the figures that fit that size are included, and names are free
+text. **Extra/add-on Santa heads beyond the size are $9.99 each**; pets/hearts are paid add-ons too.)*
 
 ---
 
@@ -51,7 +51,7 @@ Small / Medium / Large / XL with their prices. That's your "pick a size" step �
 In the options app, create an **Option Set** and attach it to the Family Tree product. Add fields:
 
 - **Field 1 — "How many Santa heads?"** → type: **Dropdown** → values **2, 3, 4, 5, 6, 7, 8**
-  *(optional: add a small price per head here if you ever want per-head pricing)*
+  *(extra Santa heads beyond what the size includes = +$9.99 each)*
 - **Field 2 — "Name on Santa #1"** → type: **Text box** → *Required*
 - **Field 3 — "Name on Santa #2"** → Text box → *Required*
 - **Field 4 — "Name on Santa #3"** → Text box
@@ -73,7 +73,6 @@ In the same option set, add:
   (show only if a pet is chosen) and a **"Pet fur color"** box.
 - **"Add hearts?"** → Dropdown with **+$8** each.
 - **"Family name for the star"** → Text box (Required) — this is the star topper wording.
-- **"Add a gift box?"** → +$8.
 
 ### 5. Save & preview
 Open the product on your live store and walk the flow: pick **XL → 6 heads → 6 name boxes → type
@@ -100,16 +99,12 @@ Same idea, different figures (these use **base price + add a figure**, no size v
 
 ## Pricing models (pick one)
 
-**Option A — by size, figures included (current CSV setup).** Simplest. The size price covers its
-figures; names are free text; only pets/hearts/extras cost more. Good if your sizes already reflect
-the number of people.
+**Selected: by size, figures included.** The size price covers the figures that fit that size; names
+are free text. **Extra Santa heads beyond the size are $9.99 each**, and pets ($12) / hearts ($8) are
+paid add-ons. This is the current CSV setup and works the moment you import.
 
-**Option B — base + per Santa head.** Lower the size base prices, then put a **price on the "How
-many Santa heads?" dropdown** (e.g. +$12 each) in the app. The total climbs as they add people. Use
-this if you'd rather charge per figure than per size.
-
-> You can start with **Option A** (works the moment you import) and switch to B anytime by editing
-> the dropdown prices in the app — no re-import needed.
+> If you ever want to charge **per Santa head from the start** instead, lower the size base prices and
+> set the "How many Santa heads?" dropdown to **+$9.99 each** in the app — no re-import needed.
 
 ---
 
@@ -117,6 +112,6 @@ this if you'd rather charge per figure than per size.
 - [ ] Install **Globo Product Options** (or Hulk)
 - [ ] Import the CSV (tree already has Small/Medium/Large/XL)
 - [ ] Build the option set: "How many Santa heads?" + Name #1–#8 (conditional)
-- [ ] Add pet / heart / star-name / gift-box options
+- [ ] Add pet / heart / star-name options (extra Santa heads = $9.99 each)
 - [ ] Repeat for Turkey (pilgrims) and Egg (bunnies)
 - [ ] Test the full flow and place a test order to confirm names come through

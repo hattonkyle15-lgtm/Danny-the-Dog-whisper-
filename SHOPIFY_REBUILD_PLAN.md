@@ -705,7 +705,7 @@ grid + a few vertical (4:5) for mobile, and keep editing consistent (slightly wa
 | Family of 7 | ~$54 | **$85** | Best |
 | Family of 8 — Grand Tree | $60.99 | **$99** | Best (flagship) |
 | Family Home & Tree Ornament | $18.50 | **$36** | Standalone ornament |
-| Santa Head Figure (add-on) | ~$7 | **$12** | Add-on |
+| Santa Head Figure (add-on) | ~$7 | **$9.99** | Add-on |
 | Dog Magnet (5 fur colors) | — | **$12** | Add-on |
 | Cat Magnet (5 fur colors) | — | **$12** | Add-on |
 | Clay Heart Magnet | — | **$8** | Add-on |

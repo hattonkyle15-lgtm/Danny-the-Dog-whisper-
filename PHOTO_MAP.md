@@ -53,7 +53,7 @@ plain tree / close-up as image 2.
 | `personalized-bunny-figure` | Bunny Figure | 2 bunnies (purple bow tie + pink bow) |
 
 > The separate size-specific gift **bundles** were folded into the configurable tree + add-ons
-> (pets, hearts, **Add a Premium Gift Box** $8). No separate bundle photos needed.
+> (extra Santa heads $9.99, pets, hearts). No separate bundle photos needed.
 
 ---
 
