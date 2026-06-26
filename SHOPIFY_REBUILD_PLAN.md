@@ -706,16 +706,16 @@ grid + a few vertical (4:5) for mobile, and keep editing consistent (slightly wa
 | Family of 8 — Grand Tree | $60.99 | **$99** | Best (flagship) |
 | Family Home & Tree Ornament | $18.50 | **$36** | Standalone ornament |
 | Santa Head Figure (add-on) | ~$7 | **$9.99** | Add-on |
-| Dog Magnet (5 fur colors) | — | **$12** | Add-on |
-| Cat Magnet (5 fur colors) | — | **$12** | Add-on |
+| Dog Magnet (5 fur colors) | — | **$9.99** | Add-on |
+| Cat Magnet (5 fur colors) | — | **$9.99** | Add-on |
 | Clay Heart Magnet | — | **$8** | Add-on |
 | Personalized Family Star (topper/dated) | — | **$10** | Add-on |
 | Clay Angel Ornament | — | **$16** | Standalone ornament |
 | Memorial Magnet | — | **$12** | Add-on |
 | 🦃 Pilgrim Turkey (Thanksgiving centerpiece) | — | **$46** | Centerpiece (+ figures) |
-| 🦃 Pilgrim Figure (boy/girl, add-on) | — | **$12** | Add-on |
+| 🦃 Pilgrim Figure (boy/girl, add-on) | — | **$9.99** | Add-on |
 | 🐰 Easter Egg Keepsake (centerpiece) | — | **$38** | Centerpiece (+ figures) |
-| 🐰 Easter Bunny Figure (boy/girl, add-on) | — | **$12** | Add-on |
+| 🐰 Easter Bunny Figure (boy/girl, add-on) | — | **$9.99** | Add-on |
 | Couple's Keepsake bundle | — | **$59** | Bundle |
 | Family Bundle | — | **$84** | Bundle (popular) |
 | Grandparent Gift Set | — | **$99** | Bundle |

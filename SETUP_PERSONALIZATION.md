@@ -69,7 +69,7 @@ Stacy. Pick 6, six boxes appear. Exactly your example.
 
 ### 4. (Optional) Add the extras as paid add-ons
 In the same option set, add:
-- **"Add a pet?"** → Dropdown: None / Dog (+$12) / Cat (+$12) → plus a **"Pet's name"** text box
+- **"Add a pet?"** → Dropdown: None / Dog (+$9.99) / Cat (+$9.99) → plus a **"Pet's name"** text box
   (show only if a pet is chosen) and a **"Pet fur color"** box.
 - **"Add hearts?"** → Dropdown with **+$8** each.
 - **"Family name for the star"** → Text box (Required) — this is the star topper wording.
@@ -100,7 +100,7 @@ Same idea, different figures (these use **base price + add a figure**, no size v
 ## Pricing models (pick one)
 
 **Selected: by size, figures included.** The size price covers the figures that fit that size; names
-are free text. **Extra Santa heads beyond the size are $9.99 each**, and pets ($12) / hearts ($8) are
+are free text. **Extra Santa heads beyond the size are $9.99 each**, and pets ($9.99) / hearts ($8) are
 paid add-ons. This is the current CSV setup and works the moment you import.
 
 > If you ever want to charge **per Santa head from the start** instead, lower the size base prices and
