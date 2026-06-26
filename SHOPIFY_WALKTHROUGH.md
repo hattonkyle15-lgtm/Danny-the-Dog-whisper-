@@ -51,12 +51,12 @@ Now add the figures. For **each** figure below, click **Add option** and set it 
 - Price add-on: **$9.99** per unit → turn ON "add price"
 - Save.
 
-**Option 2 — Santa names** (one set of name boxes)
+**Option 2 — Santa names**
 - Option type: **Text field**
-- Label: **Santa head names (one per line)**
-- Help text: "Type each name on its own line."
-- *(Simple version: one box for all names. Fancy version below in Part 5.)*
-- Save.
+- Label: **Santa head names**
+- Help text: "List each name, one per line (one per Santa head)."
+- Mark **Required**.
+- Save. *(So 4 Santa heads → the customer types 4 names. Want a separate box per head? See Part 5.)*
 
 **Option 3 — Dog Face**
 - Add option → type **Image swatch** (or **Dropdown**)
@@ -95,37 +95,56 @@ Now add the figures. For **each** figure below, click **Add option** and set it 
 
 ## PART 3 — The Thanksgiving Turkey
 
+The customer can pick **any mix** — e.g. **4 boys + 3 girls** — and name **each one**. The trick:
+each pilgrim type gets its **own quantity** and its **own name box**.
+
 1. Globo app → **Create option set** → name **Turkey – Add Pilgrims** → apply to **Personalized
    Pilgrim Turkey** → Save.
-2. Add option → **Quantity** → label **How many Boy pilgrims? (black hat)** → **$9.99** each.
-3. Add **Text field** → label **Boy pilgrim names (one per line)**.
+2. Add option → **Quantity** (or Dropdown 0–8) → label **How many Boy pilgrims? (black hat)** →
+   turn ON add price → **$9.99** each.
+3. Add option → **Text field** → label **Boy pilgrim names** → help text: *"List each boy's name,
+   one per line (e.g. Bill, Bob, Benny, Mike)."* → mark it **Required**.
 4. Add option → **Quantity** → label **How many Girl pilgrims? (white bonnet)** → **$9.99** each.
-5. Add **Text field** → label **Girl pilgrim names (one per line)**.
+5. Add option → **Text field** → label **Girl pilgrim names** → help text: *"List each girl's name,
+   one per line."* → **Required**.
 6. Save. Make sure the Turkey product has a **photo** (Media).
+
+> **Example that now works:** customer sets Boy = 4, types "Bill, Bob, Benny, Mike"; sets Girl = 3,
+> types 3 names. Price = $24.99 + 7 × $9.99. The order shows both name lists so Sue letters all 7.
+> *(Want a separate box per pilgrim instead of a list? See Part 5 — same idea, prettier.)*
 
 ---
 
 ## PART 4 — The Easter Egg
 
+Same as the turkey — the customer can pick **e.g. 4 blue + 3 pink** and name **each one**.
+
 1. Globo app → **Create option set** → name **Egg – Add Bunnies** → apply to **Personalized Easter
    Egg Keepsake** → Save.
-2. Add option → **Quantity** → label **How many Blue bunnies?** → **$9.99** each.
-3. Add **Text field** → **Blue bunny names (one per line)**.
+2. Add option → **Quantity** (0–8) → label **How many Blue bunnies?** → ON add price → **$9.99** each.
+3. Add option → **Text field** → label **Blue bunny names** → help text: *"List each name, one per
+   line (e.g. Bill, Bob, Benny, Mike)."* → **Required**.
 4. Add option → **Quantity** → label **How many Pink bunnies?** → **$9.99** each.
-5. Add **Text field** → **Pink bunny names (one per line)**.
+5. Add option → **Text field** → label **Pink bunny names** → help text: *"List each name, one per
+   line."* → **Required**.
 6. Add option → **Text field** → label **Wording on the egg** → help text: 'Default "Happy Easter," or your family name.'
 7. Save. Confirm the Egg product has a **photo**.
 
+> **Example that now works:** Blue = 4 → "Bill, Bob, Benny, Mike"; Pink = 3 → 3 names. Price =
+> $24.99 + 7 × $9.99. Both name lists ride along on the order.
+
 ---
 
-## PART 5 — (Optional, nicer) A name box per figure
-If you want a separate name box that appears for each figure instead of one "one per line" box:
-1. In the option set, after the quantity option, add **Text fields** named **Name #1, Name #2 … Name #8**.
-2. On each, set a **Condition / Logic rule**: "show this field only if [How many Santa heads?] is
-   greater than or equal to 1, 2, 3…" matching its number.
-3. Globo's **Conditional logic** is under each option's settings ("Add condition").
-This gives the exact "4 heads = 4 name boxes" behavior. Do the simple one-box version first if you
-want to launch fast.
+## PART 5 — (Optional, nicer) A separate name box per figure
+The one-per-line box already captures every name. If you'd rather have a **separate labeled box per
+figure** (so "Boy #1, Boy #2…" each have their own field), do this for any quantity option:
+1. After the quantity option (e.g. "How many Boy pilgrims?"), add **Text fields** named **Boy #1,
+   Boy #2 … Boy #8**.
+2. On each, click **Add condition / Logic** and set: "show only if [How many Boy pilgrims?] ≥ 1, 2,
+   3…" matching its number.
+3. Repeat per type (Girl #1–#8, Blue #1–#8, Santa #1–#8, etc.).
+This gives the exact "4 boys = 4 name boxes, 3 girls = 3 name boxes" behavior. Launch with the
+simple one-box-per-type version first if you want to go live fast — both capture every name.
 
 ---
 
